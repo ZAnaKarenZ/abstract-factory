@@ -35,19 +35,19 @@ class Dress:
         pass
 
 #Concrete classes
-class CasualOutfit:
+class CasualOutfit(Outfit):
     def printOutfit(self):
         pass
 
-class CasualDress:
+class CasualDress(Dress):
     def printDress(self):
         pass
 
-class ElegantOutfit:
+class ElegantOutfit(Outfit):
     def printOutfit(self):
         pass
 
-class ElegantDress:
+class ElegantDress(Dress):
     def printDress(self):
         pass
 
