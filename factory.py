@@ -21,3 +21,33 @@ class ElegantClothingFactory(ClothingFactory):
         pass
     def createDress(self):
         pass
+
+
+#Abstract classes
+class Outfit:
+    @abstractmethod
+    def printOutfit(self):
+        pass
+
+class Dress:
+    @abstractmethod
+    def printDress(self):
+        pass
+
+#Concrete classes
+class CasualOutfit:
+    def printOutfit(self):
+        pass
+
+class CasualDress:
+    def printDress(self):
+        pass
+
+class ElegantOutfit:
+    def printOutfit(self):
+        pass
+
+class ElegantDress:
+    def printDress(self):
+        pass
+
