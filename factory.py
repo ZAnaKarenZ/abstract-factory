@@ -20,12 +20,16 @@ class CasualClothingFactory(ClothingFactory):
         return CasualOutfit()
     def createDress(self):
         return CasualDress()
-
+    def qualityReview(self):
+        print("Quality review")
+        
 class ElegantClothingFactory(ClothingFactory):
     def createOutfit(self):
         return ElegantOutfit()
     def createDress(self):
         return ElegantDress()
+    def designersMeeting(self):
+        print("Desigtners Meeting")
 
 #Abstract classes
 class Outfit(ABC):
@@ -87,14 +91,16 @@ if __name__ == "__main__":
     ]
 
     #Deliver to client
-    print("Casual Clothing:")
+    print("Casual Clothing Factory:")
     client = Client(factories[0], type[0])
     client.deliver()
     client = Client(factories[0], type[1])
     client.deliver()
+    factories[0].qualityReview()
 
-    print("\nElegant Clothing:")
+    print("\nElegant Clothing Factory:")
     client = Client(factories[1], type[0])
     client.deliver()
     client = Client(factories[1], type[1])
     client.deliver()
+    factories[1].designersMeeting()
