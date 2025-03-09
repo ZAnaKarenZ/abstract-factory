@@ -1,9 +1,5 @@
 from abc import ABC, abstractmethod
-
-#Function to print ascii art
-def print_ascii_art(file):
-    f= open(file,'r')
-    print(''.join([line for line in f]))
+from methods.print_ascii_art import print_ascii_art
 
 #Abstract interface
 class ClothingFactory(ABC):
@@ -37,7 +33,7 @@ class Outfit(ABC):
     def printOutfit(self):
         pass
 
-class Dress:
+class Dress(ABC):
     @abstractmethod
     def printDress(self):
         pass
@@ -45,19 +41,19 @@ class Dress:
 #Concrete classes
 class CasualOutfit(Outfit):
     def printOutfit(self):        
-        print_ascii_art('props/CasualOutfit.txt')
+        print_ascii_art('CasualOutfit.txt')
 
 class CasualDress(Dress):
     def printDress(self):
-        print_ascii_art('props/CasualDress.txt')
+        print_ascii_art('CasualDress.txt')
 
 class ElegantOutfit(Outfit):
     def printOutfit(self):
-        print_ascii_art('props/ElegantOutfit.txt')
+        print_ascii_art('ElegantOutfit.txt')
 
 class ElegantDress(Dress):
     def printDress(self):
-        print_ascii_art('props/ElegantDress.txt')
+        print_ascii_art('ElegantDress.txt')
 
 #Client
 class Client:
