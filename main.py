@@ -1,6 +1,6 @@
 """"
 Ana Karen Zetter A01637124
-Abstract factory model
+Abstract factory
 """
 #Note to self: Unlike C++, there is no need to use #Pragma once (or equivalent) in Python to avoid multiple instances of the same.
 from client.client import Client
